@@ -178,9 +178,54 @@ void DIO_voidSetPinValue(unsigned char port,unsigned char pin, unsigned char val
 }
 
 void DIO_voidSetPortDirection(unsigned char port,unsigned char direction){
+	switch (port) {
+	
+				case PORTA:
+								GPIO_PORTA_DIR |= direction;	
+						break;
+				case PORTB:
+								GPIO_PORTB_DIR |= direction;
+						break;
+				case PORTC:
+								GPIO_PORTC_DIR |= direction;
+						break;
+				case PORTD:
+								GPIO_PORTD_DIR |= direction;
+						break;
+				case PORTE:
+								GPIO_PORTE_DIR |= direction;
+						break;
+				case PORTF:
+								GPIO_PORTF_DIR |= direction;
+						break;
+			}
 }
 
-void DIO_voidSetPortValue(unsigned char port,unsigned char value){
+void DIO_voidSetPortValue(unsigned char port,unsigned char value){ 
+	
+	switch (port) {
+	case PORTA:
+								GPIO_PORTA_DATA |= value;	
+						break;
+	case PORTB:
+								GPIO_PORTB_DATA |= value;
+						break;
+	case PORTC:
+								GPIO_PORTC_DATA|= value;
+						break;
+	case PORTD:
+								GPIO_PORTD_DATA |= value;
+						break;
+	case PORTE:
+								GPIO_PORTE_DATA |= value;
+						break;
+	case PORTF:
+								GPIO_PORTF_DATA |= value;
+						break;
 }
+	
+}
+
+
 
 
