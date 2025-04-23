@@ -2,9 +2,10 @@
 #define UART_H_
 
 
-#include "BIT_MATH.h"
-#include "GPIO.h"
-#include "TM4C123GH6PM.h"
+#include "../../LIB/BIT_MATH.h" 
+#include "../../LIB/STD.h" 
+
+#include "../TM4C123.h"
 
 #define INT_BR 104 
 #define FRACT_BR 11 

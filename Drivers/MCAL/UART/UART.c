@@ -1,3 +1,4 @@
+#include "GPIO.h"
 #include "UART.h" 
  
 
@@ -6,9 +7,9 @@
   // ********************************UART_0 --> PC *******************************//
 
 void UART0_Init(void){
-	  SET_BIT(SYSCTL_RCGCUART_R ,0x01 );    // Enable UART0 clock
-    SET_BIT(SYSCTL_RCGCGPIO_R , 0x01);    // Enable clock to Port A
-    while ((SYSCTL_PRGPIO_R & 0x01) == 0) {};  // Wait until Port A is ready
+	 SET_BIT(SYSCTL_RCGCUART_R ,0);    // Enable UART0 clock
+   SET_BIT(SYSCTL_RCGCGPIO_R, 0);   // Enable clock to Port A
+   while(GET_BIT(SYSCTL_PRGPIO_R, 0) == 0); // Wait until Port A is ready
 
     CLR_BIT(UART0_CTL_R , 0x01) ;         // Disable UART0
     UART0_IBRD_R = 104;           // Integer part of 9600 baud
@@ -26,7 +27,7 @@ void UART0_Init(void){
 void UART0_SendChar(char c){
     while ((UART0_FR_R & 0x20) != 0); // Wait if TX is full
     UART0_DR_R = c;
-	
+		
 }
 
 char UART0_ReceiveChar(void) {
@@ -45,8 +46,8 @@ void UART0_SendString(char *str) {
 
 
 void UART1_Init(void) {
-    SYSCTL_RCGCUART_R |= 0x02;    // Enable UART1 clock
-    SYSCTL_RCGCGPIO_R |= 0x04;    // Enable clock to Port C
+    SYSCTL_RCGCUART_R |= 0x01;    // Enable UART1 clock
+    SYSCTL_RCGCGPIO_R |= 0x01;    // Enable clock to Port C
     while ((SYSCTL_PRGPIO_R & 0x04) == 0) {};
 
     UART1_CTL_R &= ~0x01;         // Disable UART1
