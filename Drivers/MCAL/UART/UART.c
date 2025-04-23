@@ -48,8 +48,7 @@ void UART0_SendString(char *str) {
 void UART1_Init(void) {
     SYSCTL_RCGCUART_R |= 0x01;    // Enable UART1 clock
     SYSCTL_RCGCGPIO_R |= 0x01;    // Enable clock to Port C
-    while ((SYSCTL_PRGPIO_R & 0x04) == 0) {};
-
+    while(GET_BIT(SYSCTL_PRGPIO_R, 1) == 0);
     UART1_CTL_R &= ~0x01;         // Disable UART1
     UART1_IBRD_R = INT_BR ;           // Integer part (same baud as GPS: 9600)
     UART1_FBRD_R = FRACT_BR ;            // Fractional part
