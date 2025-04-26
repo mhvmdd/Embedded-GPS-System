@@ -2,6 +2,8 @@
 #define LCD_H
 
 #include <stdint.h>
+#include "STD.h"
+#include "../GPIO/GPIO.h"
 
 //-----------------------------------------------------------------------------
 // Commands and Constants for HD44780 LCD
@@ -51,6 +53,9 @@
 
 #define LCD_CMD_SET_DDRAM_ADDR 0x80
 
+// DDRAM Address Offsets for common displays
+#define LCD_LINE_0_ADDR_OFFSET 0x00 // Start address for line 0
+#define LCD_LINE_1_ADDR_OFFSET 0x40
 //-----------------------------------------------------------------------------
 // Functions Prototypes
 //-----------------------------------------------------------------------------
