@@ -126,7 +126,7 @@ void LCD_Init(void)
     // --- Configure LCD parameters ---
     LCD_SendCommand(LCD_CMD_FUNCTION_SET | LCD_FUNCTION_4BIT | LCD_FUNCTION_2LINE | LCD_FUNCTION_5X8); // 0x28
     LCD_SendCommand(LCD_CMD_DISPLAY_CONTROL | LCD_DISPLAY_OFF | LCD_CURSOR_OFF | LCD_BLINK_OFF);       // 0x08
-    LCD_Clear();                                                                                       // 0x01 + delay
+    LCD_Clear();                                                                                       // 0x01
     LCD_SendCommand(LCD_CMD_ENTRY_MODE_SET | LCD_ENTRY_INCREMENT | LCD_ENTRY_DISPLAY_SHIFT_OFF);       // 0x06
     LCD_SendCommand(LCD_CMD_DISPLAY_CONTROL | LCD_DISPLAY_ON | LCD_CURSOR_OFF | LCD_BLINK_OFF);        // 0x0C - Display ON
 }
