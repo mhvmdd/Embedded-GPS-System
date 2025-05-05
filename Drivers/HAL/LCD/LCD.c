@@ -31,11 +31,11 @@
 static void LCD_Pulse_Enable(void)
 {
 
-    // TODO : delay for setup time (e.g., 100ns)
+    SYSTICK_DelayMs(1);
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_E_PIN, HIGH); // Set E high, wait, then set E low
-    // TODO : delay for hold time (e.g., 100ns)
+    SYSTICK_DelayMs(1);
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_E_PIN, LOW); // Delay for pulse width (e.g., 1ms)
-    // TODO : delay until stable (e.g., 100ns)
+    SYSTICK_DelayMs(1);
 }
 
 /**
@@ -62,14 +62,13 @@ static void LCD_SendByte(uint8_t byte, uint8_t isData)
 {
     // Set RS pin for command or data
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_RS_PIN, isData ? HIGH : LOW);
-
+    SYSTICK_DelayMs(1); // Delay for RS setup time
     // Send the high nibble first
     LCD_SendNibble((byte >> 4) & 0x0F);
 
     // Send the low nibble
     LCD_SendNibble(byte & 0x0F);
-
-    // TODO : delay for command/data execution (e.g., 50 micro for most commands)
+    SYSTICK_DelayMs(1); // Delay for command execution time
 }
 
 /**
@@ -84,13 +83,13 @@ static void LCD_ForceInto4BitMode()
 {
     // --- Special function set sequence to enter 4 bit mode ---
     LCD_SendNibble(0x03);
-    // TODO : delay (a must form HD44780 datasheet : around 5ms)
+    SYSTICK_DelayMs(5);
     LCD_SendNibble(0x03);
-    // TODO : delay (a must form HD44780 datasheet : around 150us)
+    SYSTICK_DelayMs(1);
     LCD_SendNibble(0x03);
-    // TODO : delay (a must form HD44780 datasheet : around 150us)
+    SYSTICK_DelayMs(1);
     LCD_SendNibble(0x02); // Set to 4-bit mode entry point
-    // TODO : delay (a must form HD44780 datasheet : around 150us)
+    SYSTICK_DelayMs(1);
 }
 
 //-----------------------------------------------------------------------------
@@ -115,7 +114,7 @@ void LCD_Init(void)
 
     // 4. Start LCD Initialization Sequence (HD44780 4-bit mode)
 
-    // TODO : delay for power-up (e.g., 50ms)
+    SYSTICK_DelayMs(50);
 
     // Set RS and E low initially
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_RS_PIN, LOW);
@@ -137,7 +136,7 @@ void LCD_SendCommand(uint8_t cmd)
 
     if (cmd == LCD_CMD_CLEAR_DISPLAY || cmd == LCD_CMD_RETURN_HOME)
     {
-        // TODO : delay for command execution (e.g., 2ms for these 2 commands)
+        SYSTICK_DelayMs(2);
     }
 }
 

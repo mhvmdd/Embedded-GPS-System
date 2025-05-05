@@ -3,8 +3,8 @@
 
 #include <stdint.h>
 #include "STD.h"
-#include "../GPIO/GPIO.h"
-
+#include "../../MCAL/GPIO/GPIO.h"
+#include "../../MCAL/SYSTICK/SYSTICK.h"
 //-----------------------------------------------------------------------------
 // Commands and Constants for HD44780 LCD
 //-----------------------------------------------------------------------------
