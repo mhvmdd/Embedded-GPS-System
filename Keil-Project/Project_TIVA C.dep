@@ -1,0 +1,84 @@
+Dependencies for Project 'Project', Target 'TIVA C': (DO NOT MODIFY !)
+F (.\startup_TM4C123.s)(0x681B67CD)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
+F (..\Drivers\APP\main.c)(0x6821F98F)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C80BA4)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+I (..\Drivers\MCAL\GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+I (..\Drivers\MCAL\SYSTICK/SYSTICK.h)(0x6821F8E4)
+I (..\Drivers\MCAL\UART/UART.h)(0x6818623D)
+I (..\Drivers\MCAL\ADC/ADC.h)(0x6821F463)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (..\Drivers\HAL\LCD/LCD.h)(0x6821F484)
+I (..\Drivers\HAL\GPS/GPS.h)(0x6821F449)
+I (..\Drivers\HAL\SWITCH/SWITCH.h)(0x681F7791)
+I (..\Drivers\HAL\LED/LED.h)(0x6821F8E4)
+I (..\Drivers\APP\Program.h)(0x6821F28F)
+F (..\Drivers\APP\Program.c)(0x6821F880)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\program.o --omf_browse .\program.crf --depend .\program.d)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C80BA4)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+I (..\Drivers\MCAL\GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+I (..\Drivers\MCAL\SYSTICK/SYSTICK.h)(0x6821F8E4)
+I (..\Drivers\MCAL\UART/UART.h)(0x6818623D)
+I (..\Drivers\MCAL\ADC/ADC.h)(0x6821F463)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (..\Drivers\HAL\LCD/LCD.h)(0x6821F484)
+I (..\Drivers\HAL\GPS/GPS.h)(0x6821F449)
+I (..\Drivers\HAL\SWITCH/SWITCH.h)(0x681F7791)
+I (..\Drivers\HAL\LED/LED.h)(0x6821F8E4)
+I (..\Drivers\APP\Program.h)(0x6821F28F)
+F (..\Drivers\HAL\GPS\GPS.c)(0x6821F8E4)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gps.o --omf_browse .\gps.crf --depend .\gps.d)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (..\Drivers\MCAL\UART/UART.h)(0x6818623D)
+I (..\Drivers\HAL\GPS\GPS.H)(0x6821F449)
+F (..\Drivers\HAL\LCD\LCD.c)(0x6821F8E3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
+I (..\Drivers\HAL\LCD\LCD.H)(0x6821F484)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+I (..\Drivers\HAL\LCD\../../MCAL/GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\HAL\LCD\../../MCAL/SYSTICK/SYSTICK.h)(0x6821F8E4)
+F (..\Drivers\HAL\LED\LED.c)(0x6821F4A0)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (..\Drivers\HAL\LED\LED.h)(0x6821F8E4)
+I (..\Drivers\MCAL\SYSTICK/SYSTICK.h)(0x6821F8E4)
+I (..\Drivers\MCAL\GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+F (..\Drivers\HAL\SWITCH\SWITCH.c)(0x6821F8E3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\switch.o --omf_browse .\switch.crf --depend .\switch.d)
+I (..\Drivers\HAL\SWITCH\SWITCH.h)(0x681F7791)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+I (..\Drivers\MCAL\GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+F (..\Drivers\MCAL\ADC\ADC.c)(0x6821F8E3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\adc.o --omf_browse .\adc.crf --depend .\adc.d)
+I (..\Drivers\MCAL\ADC\ADC.h)(0x6821F463)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+I (..\Drivers\MCAL\GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+F (..\Drivers\MCAL\EEPROM\EEPROM.c)(0x6821F8E3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\eeprom.o --omf_browse .\eeprom.crf --depend .\eeprom.d)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+I (..\Drivers\MCAL\EEPROM\EEPROM.h)(0x6821F8E4)
+F (..\Drivers\MCAL\GPIO\GPIO.c)(0x6821F31C)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\gpio.o --omf_browse .\gpio.crf --depend .\gpio.d)
+I (..\Drivers\MCAL\GPIO\GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+F (..\Drivers\MCAL\SYSTICK\SYSTICK.c)(0x6821F8E3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
+I (..\Drivers\MCAL\SYSTICK\SYSTICK.H)(0x6821F8E4)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+F (..\Drivers\MCAL\UART\UART.c)(0x6821F8E3)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\Drivers\APP -I..\Drivers\HAL -I..\Drivers\LIB -I..\Drivers\MCAL-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (..\Drivers\LIB\BIT_MATH.h)(0x68099AC5)
+I (..\Drivers\LIB\tm4c123gh6pm.h)(0x6819BB72)
+I (..\Drivers\MCAL\GPIO/GPIO.h)(0x6821F3F9)
+I (..\Drivers\LIB\STD.h)(0x68099AC5)
+I (..\Drivers\MCAL\UART\UART.h)(0x6818623D)

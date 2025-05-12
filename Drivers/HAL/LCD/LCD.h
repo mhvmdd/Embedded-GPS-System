@@ -1,8 +1,17 @@
+
+/*
+ * LCD.c
+ *
+ *  Created on: April 30, 2025
+ *      Author: Amr Khaled
+ */
 #ifndef LCD_H
 #define LCD_H
 
 #include <stdint.h>
-
+#include "STD.h"
+#include "../../MCAL/GPIO/GPIO.h"
+#include "../../MCAL/SYSTICK/SYSTICK.h"
 //-----------------------------------------------------------------------------
 // Commands and Constants for HD44780 LCD
 //-----------------------------------------------------------------------------
@@ -51,6 +60,9 @@
 
 #define LCD_CMD_SET_DDRAM_ADDR 0x80
 
+// DDRAM Address Offsets for common displays
+#define LCD_LINE_0_ADDR_OFFSET 0x00 // Start address for line 0
+#define LCD_LINE_1_ADDR_OFFSET 0x40
 //-----------------------------------------------------------------------------
 // Functions Prototypes
 //-----------------------------------------------------------------------------
