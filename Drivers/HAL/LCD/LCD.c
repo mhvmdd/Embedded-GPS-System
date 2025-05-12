@@ -1,3 +1,12 @@
+
+
+/*
+ * LCD.c
+ *
+ *  Created on: April 30, 2025
+ *      Author: Amr Khaled
+ */
+
 #include "LCD.H"
 
 //-----------------------------------------------------------------------------
@@ -5,13 +14,18 @@
 //-----------------------------------------------------------------------------
 
 // Contorl Pins & Port
-#define LCD_CTRL_PORT PORTC // May be changed to any port
+#define LCD_CTRL_PORT PORTB // May be changed to any port
 #define LCD_RS_PIN PIN0
 // I am assuming that RW will be connected to GND (write mode only) //
 #define LCD_E_PIN PIN1
 
+#define LCD_DATA_PORT_1 PORTA // May be changed to any port
+#define LCD_D0_PIN PIN2
+#define LCD_D1_PIN PIN3
+#define LCD_D2_PIN PIN4
+#define LCD_D3_PIN PIN5
 // Data Pins & Port
-#define LCD_DATA_PORT PORTD // May be changed to any port
+#define LCD_DATA_PORT_2 PORTD // May be changed to any port
 #define LCD_D4_PIN PIN0
 #define LCD_D5_PIN PIN1
 #define LCD_D6_PIN PIN2
@@ -43,6 +57,7 @@ static void LCD_Pulse_Enable(void)
  *
  * @param nibble The 4-bit nibble to send (D4-D7).
  */
+/*
 static void LCD_SendNibble(uint8_t nibble)
 {
     // Set data pins to the desired nibble
@@ -53,7 +68,7 @@ static void LCD_SendNibble(uint8_t nibble)
 
     // Pulse the Enable pin to send the nibble
     LCD_Pulse_Enable();
-}
+}*/
 
 /**
  * @brief sends a whole byte to the LCD controller (4-bit mode).
@@ -63,12 +78,19 @@ static void LCD_SendByte(uint8_t byte, uint8_t isData)
     // Set RS pin for command or data
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_RS_PIN, isData ? HIGH : LOW);
     SYSTICK_DelayMs(1); // Delay for RS setup time
-    // Send the high nibble first
-    LCD_SendNibble((byte >> 4) & 0x0F);
+                        // Send the high nibble first
+    DIO_voidSetPinValue(LCD_DATA_PORT_1, LCD_D0_PIN, (byte >> 0) & 0x01);
+    DIO_voidSetPinValue(LCD_DATA_PORT_1, LCD_D1_PIN, (byte >> 1) & 0x01);
+    DIO_voidSetPinValue(LCD_DATA_PORT_1, LCD_D2_PIN, (byte >> 2) & 0x01);
+    DIO_voidSetPinValue(LCD_DATA_PORT_1, LCD_D3_PIN, (byte >> 3) & 0x01);
 
-    // Send the low nibble
-    LCD_SendNibble(byte & 0x0F);
+    DIO_voidSetPinValue(LCD_DATA_PORT_2, LCD_D4_PIN, (byte >> 4) & 0x01);
+    DIO_voidSetPinValue(LCD_DATA_PORT_2, LCD_D5_PIN, (byte >> 5) & 0x01);
+    DIO_voidSetPinValue(LCD_DATA_PORT_2, LCD_D6_PIN, (byte >> 6) & 0x01);
+    DIO_voidSetPinValue(LCD_DATA_PORT_2, LCD_D7_PIN, (byte >> 7) & 0x01);
     SYSTICK_DelayMs(1); // Delay for command execution time
+    LCD_Pulse_Enable();
+    SYSTICK_DelayMs(1);
 }
 
 /**
@@ -79,6 +101,8 @@ static void LCD_SendByte(uint8_t byte, uint8_t isData)
  *
  * @note This function is called during initialization to ensure the LCD.
  */
+
+/*
 static void LCD_ForceInto4BitMode()
 {
     // --- Special function set sequence to enter 4 bit mode ---
@@ -90,8 +114,8 @@ static void LCD_ForceInto4BitMode()
     SYSTICK_DelayMs(1);
     LCD_SendNibble(0x02); // Set to 4-bit mode entry point
     SYSTICK_DelayMs(1);
-}
-
+     }
+*/
 //-----------------------------------------------------------------------------
 // API Functions
 //-----------------------------------------------------------------------------
@@ -99,18 +123,25 @@ static void LCD_ForceInto4BitMode()
 void LCD_Init(void)
 {
     // 1. Enable the clock for the GPIO peripherals used
-    DIO_voidInitPort(LCD_CTRL_PORT); // Initialize control port
-    DIO_voidInitPort(LCD_DATA_PORT); // Initialize data port
+    DIO_voidInitPort(LCD_CTRL_PORT);
+    DIO_voidInitPort(LCD_DATA_PORT_1); // Initialize control port
+    DIO_voidInitPort(LCD_DATA_PORT_2); // Initialize data port
 
     // 2. Configure the GPIO pins used for LCD control (RS, E) as outputs
     DIO_voidSetPinDirection(LCD_CTRL_PORT, LCD_RS_PIN, OUTPUT);
     DIO_voidSetPinDirection(LCD_CTRL_PORT, LCD_E_PIN, OUTPUT);
 
     // 3. Configure the GPIO pins used for LCD data (D4-D7) as outputs
-    DIO_voidSetPinDirection(LCD_DATA_PORT, LCD_D4_PIN, OUTPUT);
-    DIO_voidSetPinDirection(LCD_DATA_PORT, LCD_D5_PIN, OUTPUT);
-    DIO_voidSetPinDirection(LCD_DATA_PORT, LCD_D6_PIN, OUTPUT);
-    DIO_voidSetPinDirection(LCD_DATA_PORT, LCD_D7_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_1, LCD_D0_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_1, LCD_D1_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_1, LCD_D2_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_1, LCD_D3_PIN, OUTPUT);
+
+    // 3. Configure the GPIO pins used for LCD data (D4-D7) as outputs
+    DIO_voidSetPinDirection(LCD_DATA_PORT_2, LCD_D4_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_2, LCD_D5_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_2, LCD_D6_PIN, OUTPUT);
+    DIO_voidSetPinDirection(LCD_DATA_PORT_2, LCD_D7_PIN, OUTPUT);
 
     // 4. Start LCD Initialization Sequence (HD44780 4-bit mode)
 
@@ -120,14 +151,14 @@ void LCD_Init(void)
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_RS_PIN, LOW);
     DIO_voidSetPinValue(LCD_CTRL_PORT, LCD_E_PIN, LOW);
 
-    LCD_ForceInto4BitMode();
+    // LCD_ForceInto4BitMode();
 
     // --- Configure LCD parameters ---
-    LCD_SendCommand(LCD_CMD_FUNCTION_SET | LCD_FUNCTION_4BIT | LCD_FUNCTION_2LINE | LCD_FUNCTION_5X8); // 0x28
-    LCD_SendCommand(LCD_CMD_DISPLAY_CONTROL | LCD_DISPLAY_OFF | LCD_CURSOR_OFF | LCD_BLINK_OFF);       // 0x08
-    LCD_Clear();                                                                                       // 0x01
-    LCD_SendCommand(LCD_CMD_ENTRY_MODE_SET | LCD_ENTRY_INCREMENT | LCD_ENTRY_DISPLAY_SHIFT_OFF);       // 0x06
-    LCD_SendCommand(LCD_CMD_DISPLAY_CONTROL | LCD_DISPLAY_ON | LCD_CURSOR_OFF | LCD_BLINK_OFF);        // 0x0C - Display ON
+    LCD_SendCommand(0x38);                                                                       // 0x38
+    LCD_SendCommand(LCD_CMD_DISPLAY_CONTROL | LCD_DISPLAY_OFF | LCD_CURSOR_OFF | LCD_BLINK_OFF); // 0x08
+    LCD_Clear();                                                                                 // 0x01
+    LCD_SendCommand(LCD_CMD_ENTRY_MODE_SET | LCD_ENTRY_INCREMENT | LCD_ENTRY_DISPLAY_SHIFT_OFF); // 0x06
+    LCD_SendCommand(LCD_CMD_DISPLAY_CONTROL | LCD_DISPLAY_ON | LCD_CURSOR_OFF | LCD_BLINK_OFF);  // 0x0C - Display ON
 }
 
 void LCD_SendCommand(uint8_t cmd)

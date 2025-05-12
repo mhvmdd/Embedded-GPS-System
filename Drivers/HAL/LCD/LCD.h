@@ -1,3 +1,10 @@
+
+/*
+ * LCD.c
+ *
+ *  Created on: April 30, 2025
+ *      Author: Amr Khaled
+ */
 #ifndef LCD_H
 #define LCD_H
 
