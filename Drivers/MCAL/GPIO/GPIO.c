@@ -1,3 +1,11 @@
+
+ /*
+ * GPIO.c
+ *
+ *  Created on: April 30, 2025
+ *      Author: Mohammed Ashraf
+ */
+
 #include "GPIO.h" 
 
 
@@ -13,7 +21,7 @@ void DIO_voidInitPort(unsigned char port){
 						GPIO_PORTA_AMSEL &=~0xFF;
 						GPIO_PORTA_AFSEL &=~0xFF;
 						GPIO_PORTA_PCTL &=~0xFFFFFFFF;
-				    GPIO_PORTF_LOCK = GPIO_LOCK_KEY;
+				    GPIO_PORTA_LOCK = GPIO_LOCK_KEY;
 		    		GPIO_PORTA_CR   |= 0xFF;
 						GPIO_PORTA_DEN |= 0xFF;
             break;
@@ -21,23 +29,23 @@ void DIO_voidInitPort(unsigned char port){
 						GPIO_PORTB_AMSEL &=~0xFF;
 						GPIO_PORTB_AFSEL &=~0xFF;
 						GPIO_PORTB_PCTL &=~0xFFFFFFFF;
-				    GPIO_PORTF_LOCK = GPIO_LOCK_KEY;
+				    GPIO_PORTB_LOCK = GPIO_LOCK_KEY;
 			    	GPIO_PORTB_CR   |= 0xFF;
 						GPIO_PORTB_DEN   |= 0xFF;
             break;
         case PORTC:
+						GPIO_PORTC_LOCK = GPIO_LOCK_KEY;
+				    GPIO_PORTC_CR   |= 0xFF;
 						GPIO_PORTC_AMSEL &=~0xFF;
 						GPIO_PORTC_AFSEL &=~0xFF;
 						GPIO_PORTC_PCTL &=~0xFFFFFFFF;
-			    	GPIO_PORTF_LOCK = GPIO_LOCK_KEY;
-				    GPIO_PORTC_CR   |= 0xFF;
 						GPIO_PORTC_DEN |= 0xFF;
             break;
         case PORTD:
 						GPIO_PORTD_AMSEL &=~0xFF;
 						GPIO_PORTD_AFSEL &=~0xFF;
 						GPIO_PORTD_PCTL &=~0xFFFFFFFF;
-				    GPIO_PORTF_LOCK = GPIO_LOCK_KEY;
+				    GPIO_PORTD_LOCK = GPIO_LOCK_KEY;
 				    GPIO_PORTD_CR   |= 0xFF;
 						GPIO_PORTD_DEN |= 0xFF;
             break;
@@ -45,8 +53,8 @@ void DIO_voidInitPort(unsigned char port){
 						GPIO_PORTE_AMSEL &=~0xFF;
 						GPIO_PORTE_AFSEL &=~0xFF;
 						GPIO_PORTE_PCTL &=~0xFFFFFFFF;
-				    GPIO_PORTF_LOCK = GPIO_LOCK_KEY;
-			     	GPIO_PORTC_CR   |= 0x3F;
+				    GPIO_PORTE_LOCK = GPIO_LOCK_KEY;
+			     	GPIO_PORTE_CR   |= 0x3F;
 						GPIO_PORTE_DEN |=  0xFF;
             break;
         case PORTF:
@@ -175,6 +183,32 @@ void DIO_voidSetPinValue(unsigned char port,unsigned char pin, unsigned char val
         
     }
     return value;
+}
+ 
+void DIO_voidTogglePinValue(unsigned char port,unsigned char pin){
+
+			  switch (port){
+        case PORTA:
+            TOG_BIT(GPIO_PORTA_DATA, pin);
+            break;
+        case PORTB:
+            TOG_BIT(GPIO_PORTB_DATA, pin);
+            break;
+				case PORTC:
+            TOG_BIT(GPIO_PORTC_DATA, pin);
+            break;
+				case PORTD:
+            TOG_BIT(GPIO_PORTD_DATA, pin);
+            break;
+				case PORTE:
+            TOG_BIT(GPIO_PORTE_DATA, pin);
+            break;
+				case PORTF:
+            TOG_BIT(GPIO_PORTF_DATA, pin); 
+            break;
+        
+    }
+
 }
 
 void DIO_voidSetPortDirection(unsigned char port,unsigned char direction){

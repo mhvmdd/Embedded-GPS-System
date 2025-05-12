@@ -1,3 +1,11 @@
+
+ /*
+ * GPIO.h
+ *
+ *  Created on: April 30, 2025
+ *      Author: Mohammed Ashraf
+ */
+
 #ifndef GPIO_H_
 #define	GPIO_H_
 
@@ -147,6 +155,8 @@ void DIO_voidInitPort(unsigned char port);
 void DIO_voidSetPinDirection(unsigned char port,unsigned char pin, unsigned char direction);
 
 void DIO_voidSetPinValue(unsigned char port,unsigned char pin, unsigned char value);
+
+void DIO_voidTogglePinValue(unsigned char port,unsigned char pin);
 
 char DIO_u8GetPinValue(unsigned char port,unsigned char pin);
 
