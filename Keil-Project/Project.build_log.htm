@@ -1,0 +1,169 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Lenovo\Desktop\Embedded GPS System\Keil Project\Project.uvproj
+Project File Date:  05/12/2025
+
+<h2>Output:</h2>
+Rebuild target 'TIVA C'
+assembling startup_TM4C123.s...
+compiling main.c...
+..\Drivers\MCAL\GPIO/GPIO.h(21): warning:  #47-D: incompatible redefinition of macro "SYSCTL_RCGCGPIO_R" (declared at line 2110 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_RCGCGPIO_R   *((volatile u32*)0x400FE608)//340
+..\Drivers\MCAL\GPIO/GPIO.h(22): warning:  #47-D: incompatible redefinition of macro "SYSCTL_PRGPIO_R" (declared at line 2158 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_PRGPIO_R       *((volatile u32*)0x400FEA08)//406
+..\Drivers\MCAL\SYSTICK/SYSTICK.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif /*SYSTICK_H*/
+..\Drivers\MCAL\ADC/ADC.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\HAL\GPS/GPS.h(67): warning:  #1295-D: Deprecated declaration HAL_GPSRecieveMsg - give arg types
+  void  HAL_GPSRecieveMsg();
+..\Drivers\HAL\GPS/GPS.h(72): warning:  #1-D: last line of file ends without a newline
+  #endif /*GPS_H*/
+..\Drivers\HAL\SWITCH/SWITCH.h(4): warning:  #1295-D: Deprecated declaration HAL_SWsInit - give arg types
+  void HAL_SWsInit();
+..\Drivers\HAL\SWITCH/SWITCH.h(6): warning:  #1295-D: Deprecated declaration HAL_SWsInterruptInit - give arg types
+  void HAL_SWsInterruptInit();
+..\Drivers\HAL\SWITCH/SWITCH.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\HAL\LED/LED.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\Drivers\APP\Program.h(16): warning:  #1295-D: Deprecated declaration Program_Init - give arg types
+  void Program_Init();
+..\Drivers\APP\Program.h(18): warning:  #1295-D: Deprecated declaration MainMenu - give arg types
+  void MainMenu();
+..\Drivers\APP\Program.h(19): warning:  #1295-D: Deprecated declaration GoTo - give arg types
+  void GoTo();
+..\Drivers\APP\Program.h(20): warning:  #1295-D: Deprecated declaration NearBy - give arg types
+  void NearBy();
+..\Drivers\APP\Program.h(21): warning:  #1295-D: Deprecated declaration Game - give arg types
+  void Game();
+..\Drivers\APP\Program.h(23): warning:  #1295-D: Deprecated declaration Game_LCDRedraw - give arg types
+  void Game_LCDRedraw();
+..\Drivers\APP\Program.h(24): warning:  #1295-D: Deprecated declaration Game_LCDGameOver - give arg types
+  void Game_LCDGameOver();
+..\Drivers\APP\Program.h(25): warning:  #1295-D: Deprecated declaration Program_DeInit - give arg types
+  void Program_DeInit();
+..\Drivers\APP\Program.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\APP\main.c: 19 warnings, 0 errors
+compiling Program.c...
+..\Drivers\MCAL\GPIO/GPIO.h(21): warning:  #47-D: incompatible redefinition of macro "SYSCTL_RCGCGPIO_R" (declared at line 2110 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_RCGCGPIO_R   *((volatile u32*)0x400FE608)//340
+..\Drivers\MCAL\GPIO/GPIO.h(22): warning:  #47-D: incompatible redefinition of macro "SYSCTL_PRGPIO_R" (declared at line 2158 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_PRGPIO_R       *((volatile u32*)0x400FEA08)//406
+..\Drivers\MCAL\SYSTICK/SYSTICK.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif /*SYSTICK_H*/
+..\Drivers\MCAL\ADC/ADC.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\HAL\GPS/GPS.h(67): warning:  #1295-D: Deprecated declaration HAL_GPSRecieveMsg - give arg types
+  void  HAL_GPSRecieveMsg();
+..\Drivers\HAL\GPS/GPS.h(72): warning:  #1-D: last line of file ends without a newline
+  #endif /*GPS_H*/
+..\Drivers\HAL\SWITCH/SWITCH.h(4): warning:  #1295-D: Deprecated declaration HAL_SWsInit - give arg types
+  void HAL_SWsInit();
+..\Drivers\HAL\SWITCH/SWITCH.h(6): warning:  #1295-D: Deprecated declaration HAL_SWsInterruptInit - give arg types
+  void HAL_SWsInterruptInit();
+..\Drivers\HAL\SWITCH/SWITCH.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\HAL\LED/LED.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\Drivers\APP\Program.h(16): warning:  #1295-D: Deprecated declaration Program_Init - give arg types
+  void Program_Init();
+..\Drivers\APP\Program.h(18): warning:  #1295-D: Deprecated declaration MainMenu - give arg types
+  void MainMenu();
+..\Drivers\APP\Program.h(19): warning:  #1295-D: Deprecated declaration GoTo - give arg types
+  void GoTo();
+..\Drivers\APP\Program.h(20): warning:  #1295-D: Deprecated declaration NearBy - give arg types
+  void NearBy();
+..\Drivers\APP\Program.h(21): warning:  #1295-D: Deprecated declaration Game - give arg types
+  void Game();
+..\Drivers\APP\Program.h(23): warning:  #1295-D: Deprecated declaration Game_LCDRedraw - give arg types
+  void Game_LCDRedraw();
+..\Drivers\APP\Program.h(24): warning:  #1295-D: Deprecated declaration Game_LCDGameOver - give arg types
+  void Game_LCDGameOver();
+..\Drivers\APP\Program.h(25): warning:  #1295-D: Deprecated declaration Program_DeInit - give arg types
+  void Program_DeInit();
+..\Drivers\APP\Program.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\APP\Program.c(262): warning:  #177-D: variable "name" was declared but never referenced
+        char* name = regions[i].name;
+..\Drivers\APP\Program.c: 20 warnings, 0 errors
+compiling GPS.c...
+..\Drivers\HAL\GPS\GPS.H(67): warning:  #1295-D: Deprecated declaration HAL_GPSRecieveMsg - give arg types
+  void  HAL_GPSRecieveMsg();
+..\Drivers\HAL\GPS\GPS.H(72): warning:  #1-D: last line of file ends without a newline
+  #endif /*GPS_H*/
+..\Drivers\HAL\GPS\GPS.c(135): warning:  #177-D: variable "j" was declared but never referenced
+        int j ;
+..\Drivers\HAL\GPS\GPS.c(239): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+        return (float) ((angle * PI) / 180);
+..\Drivers\HAL\GPS\GPS.c(269): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+        distance = EARTH_RADIUS * c;
+..\Drivers\HAL\GPS\GPS.c: 5 warnings, 0 errors
+compiling LCD.c...
+..\Drivers\HAL\LCD\../../MCAL/SYSTICK/SYSTICK.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif /*SYSTICK_H*/
+..\Drivers\HAL\LCD\LCD.c(223): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers\HAL\LCD\LCD.c: 2 warnings, 0 errors
+compiling LED.c...
+..\Drivers\HAL\LED\LED.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\Drivers\MCAL\SYSTICK/SYSTICK.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif /*SYSTICK_H*/
+..\Drivers\HAL\LED\LED.c(75): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers\HAL\LED\LED.c: 3 warnings, 0 errors
+compiling SWITCH.c...
+..\Drivers\HAL\SWITCH\SWITCH.h(4): warning:  #1295-D: Deprecated declaration HAL_SWsInit - give arg types
+  void HAL_SWsInit();
+..\Drivers\HAL\SWITCH\SWITCH.h(6): warning:  #1295-D: Deprecated declaration HAL_SWsInterruptInit - give arg types
+  void HAL_SWsInterruptInit();
+..\Drivers\HAL\SWITCH\SWITCH.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\MCAL\GPIO/GPIO.h(21): warning:  #47-D: incompatible redefinition of macro "SYSCTL_RCGCGPIO_R" (declared at line 2110 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_RCGCGPIO_R   *((volatile u32*)0x400FE608)//340
+..\Drivers\MCAL\GPIO/GPIO.h(22): warning:  #47-D: incompatible redefinition of macro "SYSCTL_PRGPIO_R" (declared at line 2158 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_PRGPIO_R       *((volatile u32*)0x400FEA08)//406
+..\Drivers\HAL\SWITCH\SWITCH.c: 5 warnings, 0 errors
+compiling ADC.c...
+..\Drivers\MCAL\ADC\ADC.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Drivers\MCAL\GPIO/GPIO.h(21): warning:  #47-D: incompatible redefinition of macro "SYSCTL_RCGCGPIO_R" (declared at line 2110 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_RCGCGPIO_R   *((volatile u32*)0x400FE608)//340
+..\Drivers\MCAL\GPIO/GPIO.h(22): warning:  #47-D: incompatible redefinition of macro "SYSCTL_PRGPIO_R" (declared at line 2158 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_PRGPIO_R       *((volatile u32*)0x400FEA08)//406
+..\Drivers\MCAL\ADC\ADC.c(42): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers\MCAL\ADC\ADC.c: 4 warnings, 0 errors
+compiling EEPROM.c...
+..\Drivers\MCAL\EEPROM\EEPROM.c(72): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers\MCAL\EEPROM\EEPROM.c: 1 warning, 0 errors
+compiling GPIO.c...
+compiling SYSTICK.c...
+..\Drivers\MCAL\SYSTICK\SYSTICK.H(19): warning:  #1-D: last line of file ends without a newline
+  #endif /*SYSTICK_H*/
+..\Drivers\MCAL\SYSTICK\SYSTICK.c(38): warning:  #1-D: last line of file ends without a newline
+  }
+..\Drivers\MCAL\SYSTICK\SYSTICK.c: 2 warnings, 0 errors
+compiling UART.c...
+..\Drivers\MCAL\GPIO/GPIO.h(21): warning:  #47-D: incompatible redefinition of macro "SYSCTL_RCGCGPIO_R" (declared at line 2110 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_RCGCGPIO_R   *((volatile u32*)0x400FE608)//340
+..\Drivers\MCAL\GPIO/GPIO.h(22): warning:  #47-D: incompatible redefinition of macro "SYSCTL_PRGPIO_R" (declared at line 2158 of "..\Drivers\LIB\tm4c123gh6pm.h")
+  #define SYSCTL_PRGPIO_R       *((volatile u32*)0x400FEA08)//406
+..\Drivers\MCAL\UART\UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=23222 RO-data=1314 RW-data=496 ZI-data=800  
+".\Project.axf" - 0 Error(s), 63 Warning(s).
+Load "C:\\Users\\Lenovo\\Desktop\\Embedded GPS System\\Keil Project\\Project.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+</pre>
+</body>
+</html>

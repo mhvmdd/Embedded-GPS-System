@@ -1,0 +1,16 @@
+.\program.o: ..\Drivers\APP\Program.c
+.\program.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\program.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\program.o: ..\Drivers\LIB\tm4c123gh6pm.h
+.\program.o: ..\Drivers\MCAL\GPIO/GPIO.h
+.\program.o: ..\Drivers\LIB\BIT_MATH.h
+.\program.o: ..\Drivers\LIB\STD.h
+.\program.o: ..\Drivers\MCAL\SYSTICK/SYSTICK.h
+.\program.o: ..\Drivers\MCAL\UART/UART.h
+.\program.o: ..\Drivers\MCAL\ADC/ADC.h
+.\program.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\program.o: ..\Drivers\HAL\LCD/LCD.h
+.\program.o: ..\Drivers\HAL\GPS/GPS.h
+.\program.o: ..\Drivers\HAL\SWITCH/SWITCH.h
+.\program.o: ..\Drivers\HAL\LED/LED.h
+.\program.o: ..\Drivers\APP\Program.h
