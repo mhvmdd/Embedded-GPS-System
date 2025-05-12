@@ -2,7 +2,7 @@
  * GPS.c
  *
  *  Created on: April 30, 2025
- *      Author: Ahmed Assem
+ *      Author: Ahmed Assem (not alone)
  */
 
 
