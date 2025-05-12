@@ -3,7 +3,7 @@
  * SWITCH.c
  *
  *  Created on: May 10, 2025
- *      Author: Mohammed Yasser
+ *      Author: Mohammed Mahmoud 
  */
 
 #include "SWITCH.h"
