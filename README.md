@@ -54,6 +54,7 @@ The system uses a layered architecture:
 
 ## 📁 Project Structure
 
+```
 ├── Program.c                # Main application logic and core functions
 ├── Program.h                # Function declarations for program modules
 ├── MCAL/                    # Low-level microcontroller abstraction layer
@@ -68,6 +69,7 @@ The system uses a layered architecture:
 │   └── SWITCH/              # Switch/button input handling
 ├── Images/                  # Project photos or screenshots (optional)
 └── README.md                # Project documentation (this file)
+```
 
 ---
 ## 🔌 Circuit Schematic
