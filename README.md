@@ -72,7 +72,7 @@ The system uses a layered architecture:
 ---
 ## 🔌 Circuit Schematic
 
-![Project Photo](https://drive.google.com/file/d/1g8GqZbBmXMSpkg9YJw67y70fNIqFNxSK/view?usp=sharing)
+![Circuit Schematic](https://github.com/user-attachments/assets/a572df63-4393-4e58-97f0-66d5c9bdf18b)
 
 ## ⚙️ Setup Instructions
 
@@ -88,7 +88,8 @@ The system uses a layered architecture:
 - The system randomly selects a hidden treasure location.
 - The user has to physically move toward that location.
 - Real-time distance updates are shown.
-- Upon reaching the correct location, LEDs celebrate the success.
+-![Embedded_GPS_System_Circuit_Schematic](https://github.com/user-attachments/assets/c5f820cd-048c-4b91-bd3f-2b275eb71922)
+ Upon reaching the correct location, LEDs celebrate the success.
 
 ---
 
@@ -99,10 +100,6 @@ The system uses a layered architecture:
 - Distances are calculated using the Haversine formula.
 
 ---
-## 📷 Project Photo
-
-//
-
----
 ## 🙏 Acknowledgments
 - Thanks to all contributors
+
