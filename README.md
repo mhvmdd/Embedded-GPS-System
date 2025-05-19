@@ -62,6 +62,16 @@ src/main/java/org/advcomprog/hotelbooking/hotelbookingsystem/
 ## 📋 UML Diagram
 ```mermaid
 classDiagram
+    class Displayable {
+        <<interface>>
+        +displayInfo()
+    }
+    
+    class Comparable {
+        <<interface>>
+        +compareTo()
+    }
+    
     class User {
         <<abstract>>
         -String userId
@@ -95,6 +105,7 @@ classDiagram
         +displayInfo()
         +getRoomNumber()
         +getPrice()
+        +compareTo()
     }
     
     class StandardRoom {
@@ -150,6 +161,20 @@ classDiagram
         +createBooking()
         +cancelBooking()
     }
+    
+    Displayable <|.. User
+    Displayable <|.. Guest
+    Displayable <|.. Admin
+    Displayable <|.. Room
+    Displayable <|.. StandardRoom
+    Displayable <|.. DeluxeRoom
+    Displayable <|.. Suite
+    Displayable <|.. JuniorSuite
+    Displayable <|.. LuxuriousSuite
+    Displayable <|.. Booking
+    Displayable <|.. Payment
+    
+    Comparable <|.. Room
     
     User <|-- Guest
     User <|-- Admin
