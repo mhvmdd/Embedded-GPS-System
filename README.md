@@ -61,7 +61,119 @@ src/main/java/org/advcomprog/hotelbooking/hotelbookingsystem/
 ```
 
 ## 📋 UML Diagram
-[Insert your UML diagram here]
+# 🏨 Hotel Booking System
+
+// ... existing code ...
+
+## 📋 UML Diagram
+```mermaid
+classDiagram
+    class User {
+        <<abstract>>
+        -String userId
+        -String name
+        -String email
+        -String password
+        +getUserId()
+        +getName()
+        +getEmail()
+        +getPassword()
+        +verifyPassword()
+        +getRole()
+    }
+    
+    class Guest {
+        +displayInfo()
+        +getRole()
+    }
+    
+    class Admin {
+        +displayInfo()
+        +getRole()
+    }
+    
+    class Room {
+        <<abstract>>
+        -String roomNumber
+        -int capacity
+        -double priceForNight
+        -boolean isAvailable
+        +displayInfo()
+        +getRoomNumber()
+        +getPrice()
+    }
+    
+    class StandardRoom {
+        +displayInfo()
+    }
+    
+    class DeluxeRoom {
+        +displayInfo()
+    }
+    
+    class Suite {
+        <<abstract>>
+        +displayInfo()
+    }
+    
+    class JuniorSuite {
+        +displayInfo()
+    }
+    
+    class LuxuriousSuite {
+        +displayInfo()
+    }
+    
+    class Booking {
+        -String bookingId
+        -Guest guest
+        -Room room
+        -LocalDate checkIn
+        -LocalDate checkOut
+        +displayInfo()
+        +getBookingId()
+    }
+    
+    class Payment {
+        -String paymentId
+        -String bookingId
+        -double amount
+        -PaymentMethod method
+        -PaymentStatus status
+        +displayInfo()
+        +getPaymentId()
+    }
+    
+    class Hotel {
+        -String name
+        -ArrayList~Room~ rooms
+        -ArrayList~User~ guests
+        -ArrayList~User~ admins
+        -ArrayList~Booking~ bookings
+        -ArrayList~Payment~ payments
+        +addRoom()
+        +removeRoom()
+        +createBooking()
+        +cancelBooking()
+    }
+    
+    User <|-- Guest
+    User <|-- Admin
+    Room <|-- StandardRoom
+    Room <|-- DeluxeRoom
+    Room <|-- Suite
+    Suite <|-- JuniorSuite
+    Suite <|-- LuxuriousSuite
+    Booking --> Guest
+    Booking --> Room
+    Payment --> Booking
+    Hotel --> Room
+    Hotel --> User
+    Hotel --> Booking
+    Hotel --> Payment
+```
+
+// ... existing code ...
 
 ## 🚀 Getting Started
 
