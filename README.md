@@ -59,12 +59,6 @@ src/main/java/org/advcomprog/hotelbooking/hotelbookingsystem/
 ├── Hotel.java
 └── HotelBookingSystem.java
 ```
-
-## 📋 UML Diagram
-# 🏨 Hotel Booking System
-
-// ... existing code ...
-
 ## 📋 UML Diagram
 ```mermaid
 classDiagram
@@ -172,55 +166,6 @@ classDiagram
     Hotel --> Booking
     Hotel --> Payment
 ```
-
-// ... existing code ...
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher
-- JavaFX SDK
-- Your favorite IDE (IntelliJ IDEA, Eclipse, etc.)
-
-### Installation
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/hotel-booking-system.git
-```
-
-2. Open the project in your IDE
-
-3. Build and run the project
-```bash
-javac HotelBookingSystem.java
-java HotelBookingSystem
-```
-
-## 👨‍💻 Usage
-
-### For Guests
-1. Register a new account
-2. Browse available rooms
-3. Select dates and make a booking
-4. Choose payment method
-5. Receive booking confirmation
-
-### For Admins
-1. Login to admin panel
-2. Manage rooms and bookings
-3. Handle guest registrations
-4. Process payments and refunds
-5. Apply promotional codes
-
-## 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Authors
-- Your Name - Initial work
-
 ## 🙏 Acknowledgments
 - Thanks to all contributors
 - Inspired by real-world hotel management systems
