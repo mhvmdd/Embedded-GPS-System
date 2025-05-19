@@ -54,22 +54,29 @@ The system uses a layered architecture:
 
 ## 📁 Project Structure
 
-├── Program.c # Main application logic
-├── Program.h # Function declarations
-├── MCAL/ # Hardware abstraction for GPIO, UART, ADC, SysTick
-├── HAL/ # Higher-level drivers for LCD, GPS, LEDs, Switches
-├── Images/ # Add your hardware/project photos here
-└── README.md # Project documentation
-
-yaml
-Copy
-Edit
+├── Program.c                # Main application logic and core functions
+├── Program.h                # Function declarations for program modules
+├── MCAL/                    # Low-level microcontroller abstraction layer
+│   ├── GPIO/                # GPIO configuration and control
+│   ├── UART/                # UART initialization and communication
+│   ├── ADC/                 # Analog-to-Digital Converter module
+│   └── SYSTICK/             # System Tick timer module
+├── HAL/                     # High-level abstraction drivers
+│   ├── LCD/                 # LCD control functions
+│   ├── GPS/                 # GPS message handling and parsing
+│   ├── LED/                 # LED control and effects
+│   └── SWITCH/              # Switch/button input handling
+├── Images/                  # Project photos or screenshots (optional)
+└── README.md                # Project documentation (this file)
 
 ---
+## 🔌 Circuit Schematic
+
+![Project Photo](https://drive.google.com/file/d/1g8GqZbBmXMSpkg9YJw67y70fNIqFNxSK/view?usp=sharing)
 
 ## ⚙️ Setup Instructions
 
-1. Clone this repository and import it into your IDE (e.g., Keil uVision or Code Composer Studio).
+1. Clone this repository and import it into your IDE (e.g., Keil uVision).
 2. Connect the hardware components as described.
 3. Flash the code to the Tiva C board.
 4. Power the board and enjoy the GPS tracking features via LCD and buttons.
@@ -92,7 +99,6 @@ Edit
 - Distances are calculated using the Haversine formula.
 
 ---
-
 ## 📷 Project Photo
 
 //
