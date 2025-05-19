@@ -1,4 +1,4 @@
-# Tiva C GPS Tracking System
+# Embedded GPS Tracking System
 
 A GPS-based location tracking system implemented on the Tiva C microcontroller. This project allows real-time tracking, navigation to predefined locations, nearby location detection, and even includes a fun treasure-hunt-style game — all displayed on an LCD using UART-based GPS data.
 
@@ -6,13 +6,7 @@ A GPS-based location tracking system implemented on the Tiva C microcontroller. 
 
 ## 📸 Project Preview
 
-> Add an image of your project setup here (e.g., breadboard, Tiva C, LCD, GPS module, etc.)
-
-
-markdown
-Copy
-Edit
-
+> ![Embedded_GPS_System_VideoToGif-ezgif com-optimize](https://github.com/user-attachments/assets/ca5d34d1-c10e-4aef-b03e-03ba4837bad1)
 ---
 
 ## 🚀 Features
@@ -46,7 +40,7 @@ The system uses a layered architecture:
 - **Tiva C LaunchPad (TM4C123GH6PM)**
 - **GPS Module (UART interface)**
 - **16x2 LCD Display**
-- **Push Buttons** (ON/OFF and Confirm)
+- **Push Buttons** (ON/OFF and Confirm/Back)
 - **LEDs**
 - **Potentiometer** (used for menu selection via ADC)
 
@@ -67,7 +61,6 @@ The system uses a layered architecture:
 │   ├── GPS/                 # GPS message handling and parsing
 │   ├── LED/                 # LED control and effects
 │   └── SWITCH/              # Switch/button input handling
-├── Images/                  # Project photos or screenshots (optional)
 └── README.md                # Project documentation (this file)
 ```
 
@@ -90,7 +83,6 @@ The system uses a layered architecture:
 - The system randomly selects a hidden treasure location.
 - The user has to physically move toward that location.
 - Real-time distance updates are shown.
--![Embedded_GPS_System_Circuit_Schematic](https://github.com/user-attachments/assets/c5f820cd-048c-4b91-bd3f-2b275eb71922)
  Upon reaching the correct location, LEDs celebrate the success.
 
 ---
